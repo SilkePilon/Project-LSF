@@ -1,16 +1,23 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class CameraSwitch : MonoBehaviour
 {
     public Button playButton;
     public Button exitButton;
     public Button settingsButton;
-    public Animation settingsAnimation;
-    public Animation benchAnimation;
+    public RectTransform settingsPanel;
+    public RectTransform bench;
 
     private bool isSettingsOpen = false;
+    private Vector2 settingsClosedPosition;
+    private Vector2 settingsOpenPosition;
+    private Vector2 benchClosedPosition;
+    private Vector2 benchOpenPosition;
+    private float movementDuration = 0.5f;
+    private float waitDuration = 0.3f;
 
     void Start()
     {
@@ -18,8 +25,7 @@ public class CameraSwitch : MonoBehaviour
         SetupButton(exitButton, ExitGame, "Exit");
         SetupButton(settingsButton, ToggleSettingsMenu, "Settings");
 
-        CheckAnimationComponent(settingsAnimation, "Settings");
-        CheckAnimationComponent(benchAnimation, "Bench");
+        InitializePositions();
     }
 
     void SetupButton(Button button, UnityEngine.Events.UnityAction action, string buttonName)
@@ -34,11 +40,26 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
-    void CheckAnimationComponent(Animation anim, string animName)
+    void InitializePositions()
     {
-        if (anim == null)
+        if (settingsPanel != null)
         {
-            Debug.LogWarning($"{animName} Animation component not assigned in the inspector!");
+            settingsClosedPosition = settingsPanel.anchoredPosition;
+            settingsOpenPosition = new Vector2(settingsClosedPosition.x, settingsClosedPosition.y + 360f);
+        }
+        else
+        {
+            Debug.LogWarning("Settings panel not assigned in the inspector!");
+        }
+
+        if (bench != null)
+        {
+            benchClosedPosition = bench.anchoredPosition;
+            benchOpenPosition = new Vector2(benchClosedPosition.x, benchClosedPosition.y - 200f);
+        }
+        else
+        {
+            Debug.LogWarning("Bench not assigned in the inspector!");
         }
     }
 
@@ -55,31 +76,45 @@ public class CameraSwitch : MonoBehaviour
     void ToggleSettingsMenu()
     {
         isSettingsOpen = !isSettingsOpen;
+        StartCoroutine(MoveElementsSequentially());
+    }
 
+    IEnumerator MoveElementsSequentially()
+    {
         if (isSettingsOpen)
         {
-            PlayAnimation(settingsAnimation, "OpenSettings");
-            PlayAnimation(benchAnimation, "Bench_drop");
+            // Move bench down
+            yield return StartCoroutine(MoveElement(bench, benchClosedPosition, benchOpenPosition));
+
+            // Wait for a second
+            yield return new WaitForSeconds(waitDuration);
+
+            // Move settings panel up
+            yield return StartCoroutine(MoveElement(settingsPanel, settingsClosedPosition, settingsOpenPosition));
         }
         else
         {
-            // Add logic to close the settings menu if needed
-            // For example:
-            // PlayAnimation(settingsAnimation, "settingsDown");
-            // PlayAnimation(benchAnimation, "Bench_rise");
+            // Move settings panel down
+            yield return StartCoroutine(MoveElement(settingsPanel, settingsOpenPosition, settingsClosedPosition));
+
+            // Wait for a second
+            yield return new WaitForSeconds(waitDuration);
+
+            // Move bench up
+            yield return StartCoroutine(MoveElement(bench, benchOpenPosition, benchClosedPosition));
         }
     }
 
-    void PlayAnimation(Animation anim, string clipName)
+    IEnumerator MoveElement(RectTransform element, Vector2 startPos, Vector2 endPos)
     {
-        if (anim != null && anim.GetClip(clipName) != null)
+        float elapsedTime = 0f;
+        while (elapsedTime < movementDuration)
         {
-            anim[clipName].wrapMode = WrapMode.Once;
-            anim.Play(clipName);
+            elapsedTime += Time.deltaTime;
+            float t = elapsedTime / movementDuration;
+            element.anchoredPosition = Vector2.Lerp(startPos, endPos, t);
+            yield return null;
         }
-        else
-        {
-            Debug.LogWarning($"Unable to play animation: {clipName}. Animation or clip is missing.");
-        }
+        element.anchoredPosition = endPos; // Ensure the element reaches its final position
     }
 }
