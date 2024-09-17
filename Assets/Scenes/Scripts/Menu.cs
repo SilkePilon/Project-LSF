@@ -5,39 +5,24 @@ using System.Collections;
 
 public class CameraSwitch : MonoBehaviour
 {
-    public Button playButton;
-    public Button exitButton;
-    public Button settingsButton;
+    
     public RectTransform settingsPanel;
     public RectTransform bench;
 
-    private bool isSettingsOpen = false;
+[Header("Settings")]
+    [SerializeField]private bool isSettingsOpen = false;
     private Vector2 settingsClosedPosition;
     private Vector2 settingsOpenPosition;
     private Vector2 benchClosedPosition;
     private Vector2 benchOpenPosition;
-    private float movementDuration = 0.5f;
+    private float movementDuration = 1.5f;
     private float waitDuration = 0.3f;
 
     void Start()
     {
-        SetupButton(playButton, SwitchToGameScene, "Play");
-        SetupButton(exitButton, ExitGame, "Exit");
-        SetupButton(settingsButton, ToggleSettingsMenu, "Settings");
+        
 
         InitializePositions();
-    }
-
-    void SetupButton(Button button, UnityEngine.Events.UnityAction action, string buttonName)
-    {
-        if (button != null)
-        {
-            button.onClick.AddListener(action);
-        }
-        else
-        {
-            Debug.LogWarning($"{buttonName} button not assigned in the inspector!");
-        }
     }
 
     void InitializePositions()
@@ -45,7 +30,7 @@ public class CameraSwitch : MonoBehaviour
         if (settingsPanel != null)
         {
             settingsClosedPosition = settingsPanel.anchoredPosition;
-            settingsOpenPosition = new Vector2(settingsClosedPosition.x, settingsClosedPosition.y + 360f);
+            settingsOpenPosition = new Vector2(settingsClosedPosition.x, settingsClosedPosition.y + 600f);
         }
         else
         {
@@ -63,17 +48,17 @@ public class CameraSwitch : MonoBehaviour
         }
     }
 
-    void SwitchToGameScene()
+    public void SwitchToGameScene()
     {
         SceneManager.LoadScene("game");
     }
 
-    void ExitGame()
+    public void ExitGame()
     {
         Application.Quit();
     }
 
-    void ToggleSettingsMenu()
+    public void ToggleSettingsMenu()
     {
         isSettingsOpen = !isSettingsOpen;
         StartCoroutine(MoveElementsSequentially());
