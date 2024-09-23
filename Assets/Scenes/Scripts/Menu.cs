@@ -40,7 +40,7 @@ public class CameraSwitch : MonoBehaviour
         if (bench != null)
         {
             benchClosedPosition = bench.anchoredPosition;
-            benchOpenPosition = new Vector2(benchClosedPosition.x, benchClosedPosition.y - 200f);
+            benchOpenPosition = new Vector2(benchClosedPosition.x, benchClosedPosition.y - 300f);
         }
         else
         {
