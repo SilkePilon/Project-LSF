@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class SimplifiedTwoPlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
+    public float jumpForce = 5f; // Jump height
     public GameObject player1;
     public GameObject player2;
     public Camera mainCamera;
@@ -12,10 +13,15 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
     public float maxOrthoSize = 15f;
     public float orthographicSizeMargin = 2f;
     public float cameraHeight = 10f;
-
+    
     private Vector2 player1Movement;
     private Vector2 player2Movement;
     private Vector3 lastMidpoint;
+
+    private Rigidbody player1Rb;
+    private Rigidbody player2Rb;
+    private bool isPlayer1Grounded;
+    private bool isPlayer2Grounded;
 
     private void Start()
     {
@@ -28,32 +34,58 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
             Debug.LogError("No camera assigned and couldn't find main camera!");
             return;
         }
-        
-        // Ensure the camera is orthographic
+
         mainCamera.orthographic = true;
-        
-        // Initial camera position
         UpdateCameraPosition(true);
         lastMidpoint = mainCamera.transform.position;
+
+        player1Rb = player1.GetComponent<Rigidbody>();
+        player2Rb = player2.GetComponent<Rigidbody>();
     }
 
     public void OnPlayer1Move(InputAction.CallbackContext context)
     {
-        player1Movement = context.ReadValue<Vector2>();
-        Debug.Log("Player 1 Input: " + player1Movement);
+        if (context.performed || context.canceled)
+        {
+            player1Movement = context.ReadValue<Vector2>();
+            Debug.Log("Player 1 Input: " + player1Movement);
+        }
     }
 
     public void OnPlayer2Move(InputAction.CallbackContext context)
     {
-        player2Movement = context.ReadValue<Vector2>();
-        Debug.Log("Player 2 Input: " + player2Movement);
+        if (context.performed || context.canceled)
+        {
+            player2Movement = context.ReadValue<Vector2>();
+            Debug.Log("Player 2 Input: " + player2Movement);
+        }
+    }
+
+    public void OnPlayer1Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && isPlayer1Grounded)
+        {
+            Jump(player1Rb, player1Movement);
+        }
+    }
+
+    public void OnPlayer2Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && isPlayer2Grounded)
+        {
+            Jump(player2Rb, player2Movement);
+        }
     }
 
     private void Update()
     {
-        MovePlayer(player1, player1Movement);
-        MovePlayer(player2, player2Movement);
-        UpdateCameraPosition();
+        if (player1 != null && player2 != null)
+        {
+            MovePlayer(player1, player1Movement);
+            MovePlayer(player2, player2Movement);
+            UpdateCameraPosition();
+            CheckGrounded(); // Check if players are grounded
+        }
     }
 
     private void MovePlayer(GameObject player, Vector2 movement)
@@ -65,21 +97,31 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
         }
     }
 
+    private void Jump(Rigidbody playerRb, Vector2 movement)
+    {
+        if (playerRb != null)
+        {
+            Vector3 jumpDirection = new Vector3(movement.x, jumpForce, movement.y);
+            playerRb.AddForce(jumpDirection, ForceMode.Impulse);
+        }
+    }
+
+    private void CheckGrounded()
+    {
+        // Use a raycast to check if the player is grounded
+        isPlayer1Grounded = Physics.Raycast(player1.transform.position, Vector3.down, 1.1f);
+        isPlayer2Grounded = Physics.Raycast(player2.transform.position, Vector3.down, 1.1f);
+    }
+
     private void UpdateCameraPosition(bool immediate = false)
     {
         if (player1 == null || player2 == null || mainCamera == null) return;
 
-        // Calculate the midpoint between the two players
         Vector3 midpoint = (player1.transform.position + player2.transform.position) / 2f;
         midpoint.y = cameraHeight;
 
-        // Calculate the distance between players
         float distanceBetweenPlayers = Vector3.Distance(player1.transform.position, player2.transform.position);
-
-        // Calculate the required orthographic size to fit both players
         float requiredOrthoSize = (distanceBetweenPlayers / 2f) + orthographicSizeMargin;
-
-        // Clamp the orthographic size between min and max values
         float newOrthoSize = Mathf.Clamp(requiredOrthoSize, minOrthoSize, maxOrthoSize);
 
         if (immediate)
@@ -90,13 +132,9 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
         }
         else
         {
-            // Smoothly move the camera towards the midpoint
             mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, midpoint, Time.deltaTime * cameraFollowSpeed);
-            
-            // Smoothly adjust the camera's orthographic size
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, newOrthoSize, Time.deltaTime * cameraFollowSpeed);
 
-            // If players are moving apart, zoom out faster
             if (Vector3.Distance(midpoint, lastMidpoint) > 0.1f)
             {
                 mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, newOrthoSize, Time.deltaTime * cameraFollowSpeed * 2f);
