@@ -48,7 +48,7 @@
                 {
                     "name": "up",
                     "id": "e2062cb9-1b15-46a2-838c-2f8d72a0bdd9",
-                    "path": "<Keyboard>/w",
+                    "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -59,7 +59,7 @@
                 {
                     "name": "down",
                     "id": "320bffee-a40b-4347-ac70-c210eb8bc73a",
-                    "path": "<Keyboard>/s",
+                    "path": "<Keyboard>/downArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -70,7 +70,7 @@
                 {
                     "name": "left",
                     "id": "d2581a9b-1d11-4566-b27d-b92aff5fabbc",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -81,7 +81,7 @@
                 {
                     "name": "right",
                     "id": "fcfe95b8-67b9-4526-84b5-5d0bc98d6400",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -90,7 +90,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Controler",
+                    "name": "Controller joy",
                     "id": "57bc296d-cd22-445c-ace2-8034ad507577",
                     "path": "2DVector",
                     "interactions": "",
@@ -103,10 +103,10 @@
                 {
                     "name": "up",
                     "id": "a4cce376-fbe5-4199-8922-bfea0587c6d9",
-                    "path": "<Joystick>/stick/up",
+                    "path": "<XInputController>/leftStick/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -114,10 +114,10 @@
                 {
                     "name": "down",
                     "id": "d30adbf6-94ba-46c3-9e62-2307889fff0f",
-                    "path": "<Joystick>/stick/down",
+                    "path": "<XInputController>/leftStick/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -125,10 +125,10 @@
                 {
                     "name": "left",
                     "id": "a836b0c9-2e00-455d-b98c-fedd08682f22",
-                    "path": "<Joystick>/stick/left",
+                    "path": "<XInputController>/leftStick/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -136,10 +136,10 @@
                 {
                     "name": "right",
                     "id": "78eb7c6e-c3db-4f26-b663-c742f5eaa73e",
-                    "path": "<Joystick>/stick/right",
+                    "path": "<XInputController>/leftStick/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true

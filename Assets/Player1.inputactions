@@ -48,7 +48,7 @@
                 {
                     "name": "up",
                     "id": "8180e8bd-4097-4f4e-ab88-4523101a6ce9",
-                    "path": "<Keyboard>/upArrow",
+                    "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -59,7 +59,7 @@
                 {
                     "name": "down",
                     "id": "1c5327b5-f71c-4f60-99c7-4e737386f1d1",
-                    "path": "<Keyboard>/downArrow",
+                    "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -70,7 +70,7 @@
                 {
                     "name": "left",
                     "id": "2e46982e-44cc-431b-9f0b-c11910bf467a",
-                    "path": "<Keyboard>/leftArrow",
+                    "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -81,7 +81,7 @@
                 {
                     "name": "right",
                     "id": "77bff152-3580-4b21-b6de-dcd0c7e41164",
-                    "path": "<Keyboard>/rightArrow",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
@@ -90,8 +90,8 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Controler",
-                    "id": "063e75dc-5ab7-4134-9ae3-c5f76d3f8290",
+                    "name": "Controller dpad",
+                    "id": "c4769cd5-1ac4-418f-9a53-5cf508351724",
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -102,44 +102,44 @@
                 },
                 {
                     "name": "up",
-                    "id": "f8e6a5a5-e84e-4633-aebc-73778e8d2b5b",
-                    "path": "<Joystick>/stick/up",
+                    "id": "c9ed14d4-cca4-40c2-bc98-2c22e9a81027",
+                    "path": "<XInputController>/dpad/up",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
-                    "id": "2dd76d4a-f913-430e-a20d-4b0e49fd3b54",
-                    "path": "<Joystick>/stick/down",
+                    "id": "fb18c33d-4b27-46af-8615-270436ea399d",
+                    "path": "<XInputController>/dpad/down",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
-                    "id": "09c648e1-5542-453f-93b6-690ebbd80286",
-                    "path": "<Joystick>/stick/left",
+                    "id": "3fa989de-b3a8-44a0-b301-469fa4fafe0a",
+                    "path": "<XInputController>/dpad/left",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
-                    "id": "48487ff6-ccd4-4e5a-b190-39ae7a60d40a",
-                    "path": "<Joystick>/stick/right",
+                    "id": "ffd7c0ad-4d15-4648-824e-c4cc65645c51",
+                    "path": "<XInputController>/dpad/right",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Joystick",
+                    "groups": "Gamepad",
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true

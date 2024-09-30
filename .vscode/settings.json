@@ -56,5 +56,5 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Project LSF.sln"
+    "dotnet.defaultSolution": "Project-LSF.sln"
 }
