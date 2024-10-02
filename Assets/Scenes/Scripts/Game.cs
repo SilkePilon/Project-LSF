@@ -85,27 +85,7 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
             Jump(player2Rb);
         }
     }
-
-    // Player 1 Jump Input
-    public void OnPlayer1Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && isPlayer1Grounded)
-        {
-            Jump(player1Rb);
-        }
-    }
-
-    // Player 2 Jump Input
-    public void OnPlayer2Jump(InputAction.CallbackContext context)
-    {
-        Debug.Log("spring");
-        if (context.performed && isPlayer2Grounded)
-        {
-            Debug.Log("ik mag");
-            Jump(player2Rb);
-        }
-    }
-
+    
     private void Update()
     {
         // Update player movement and camera position
@@ -150,7 +130,7 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
         Vector3 rayOrigin = player1.transform.position;
         
         // Direction of the ray (here we're using forward direction)
-        Vector3 rayDirection = -player1.transform.up;
+        Vector3 rayDirection = -player2.transform.up;
         
         // Length of the ray
         float rayLength = 100f;
