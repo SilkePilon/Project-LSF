@@ -25779,7 +25779,7 @@ Transform:
   m_GameObject: {fileID: 1671574672}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 31.1, y: 0.27, z: 5.0800705}
+  m_LocalPosition: {x: 31.1, y: -0.16, z: 5.0800705}
   m_LocalScale: {x: 1.521, y: 1.521, z: 1.521}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -26057,6 +26057,8 @@ MonoBehaviour:
   maxOrthoSize: 8.12
   orthographicSizeMargin: 2
   cameraHeight: -2
+  player1Rb: {fileID: 0}
+  isPlayer1Grounded: 0
 --- !u!1 &1946818057
 GameObject:
   m_ObjectHideFlags: 0

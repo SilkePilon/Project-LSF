@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -18,9 +19,9 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
     private Vector2 player2Movement;
     private Vector3 lastMidpoint;
 
-    private Rigidbody player1Rb;
-    private Rigidbody player2Rb;
-    private bool isPlayer1Grounded;
+    public Rigidbody2D player1Rb;
+    private Rigidbody2D player2Rb;
+    public bool isPlayer1Grounded;
     private bool isPlayer2Grounded;
 
     // Colliders for camera borders
@@ -45,8 +46,8 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
         lastMidpoint = mainCamera.transform.position;
 
         // Get the Rigidbody components for both players
-        player1Rb = player1.GetComponent<Rigidbody>();
-        player2Rb = player2.GetComponent<Rigidbody>();
+        player1Rb = player1.GetComponent<Rigidbody2D>();
+        player2Rb = player2.GetComponent<Rigidbody2D>();
 
         // Create the border colliders
         CreateBorders();
@@ -63,7 +64,7 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
         }
 
         // Trigger jump if "W" is pressed
-        if (context.performed && player1Movement.y > 0 && isPlayer1Grounded)
+        if (context.performed && player1Movement.y > 0 /*&& isPlayer1Grounded*/)
         {
             Jump(player1Rb);
         }
@@ -97,8 +98,10 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
     // Player 2 Jump Input
     public void OnPlayer2Jump(InputAction.CallbackContext context)
     {
+        Debug.Log("spring");
         if (context.performed && isPlayer2Grounded)
         {
+            Debug.Log("ik mag");
             Jump(player2Rb);
         }
     }
@@ -111,9 +114,13 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
             MovePlayer(player1, player1Movement);
             MovePlayer(player2, player2Movement);
             UpdateCameraPosition();
-            CheckGrounded();
             UpdateBorders(); // Update borders when the camera moves
         }
+    }
+
+    private void FixedUpdate()
+    {
+        CheckGrounded();
     }
 
     // Move the player using the movement input
@@ -127,20 +134,47 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
     }
 
     // Jump with the specified Rigidbody (for either player)
-    private void Jump(Rigidbody playerRb)
+    private void Jump(Rigidbody2D playerRb)
     {
         if (playerRb != null)
         {
-            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);  // Apply force upward for jump
+            Debug.Log("weeeeeeeeeeee");
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);  // Apply force upward for jump
             Debug.Log($"Player jumped with force: {jumpForce}");
         }
     }
 
     // Check if the players are grounded using a Raycast
     private void CheckGrounded()
-    {
-        isPlayer1Grounded = Physics.Raycast(player1.transform.position, Vector3.down, 1.1f);
-        isPlayer2Grounded = Physics.Raycast(player2.transform.position, Vector3.down, 1.1f);
+    { // Starting point of the ray (usually your object's position)
+        Vector3 rayOrigin = player1.transform.position;
+        
+        // Direction of the ray (here we're using forward direction)
+        Vector3 rayDirection = -player1.transform.up;
+        
+        // Length of the ray
+        float rayLength = 100f;
+
+        // Cast the ray
+        Ray ray = new Ray(rayOrigin, Vector2.down);
+        RaycastHit hit;
+
+
+        if (Physics.Raycast(ray, out hit, rayLength))
+        {
+            Debug.Log(hit.collider.name);
+        }
+        else
+        {
+            Debug.Log("ik collide niet");
+        }
+      //  isPlayer1Grounded = 
+       
+            
+            
+            isPlayer2Grounded = Physics.Raycast(player2.transform.position, Vector3.down, 1.1f);
+    
+        Debug.DrawRay(rayOrigin, rayDirection * rayLength, Color.red);
     }
 
     // Update the camera's position based on the players' positions
@@ -187,7 +221,7 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
             lastMidpoint = midpoint;
         }
 
-        Debug.Log($"Camera Position: {mainCamera.transform.position}, Ortho Size: {mainCamera.orthographicSize}");
+        //Debug.Log($"Camera Position: {mainCamera.transform.position}, Ortho Size: {mainCamera.orthographicSize}");
     }
 
     // Create the borders around the camera's edges
