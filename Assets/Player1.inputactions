@@ -91,7 +91,11 @@
                 },
                 {
                     "name": "PS Controller dpad",
+<<<<<<< Updated upstream
                     "id": "e5a0b265-2180-4683-bc0c-e5ce603f1fb1",
+=======
+                    "id": "769f5c18-8a93-4c5c-92cf-99696117cbc7",
+>>>>>>> Stashed changes
                     "path": "2DVector",
                     "interactions": "",
                     "processors": "",
@@ -102,44 +106,76 @@
                 },
                 {
                     "name": "up",
+<<<<<<< Updated upstream
                     "id": "d38fdee7-b7bf-4672-87f1-26abc5cc30bf",
                     "path": "<DualShockGamepad>/dpad/up",
                     "interactions": "",
                     "processors": "",
                     "groups": "PS Controller",
+=======
+                    "id": "17f3bb3c-15f3-4460-857b-360e2823a85c",
+                    "path": "<DualShockGamepad>/dpad/up",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS Control Scheme",
+>>>>>>> Stashed changes
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "down",
+<<<<<<< Updated upstream
                     "id": "c20eef4b-c391-4703-8588-3642b0a2da7e",
                     "path": "<DualShockGamepad>/dpad/down",
                     "interactions": "",
                     "processors": "",
                     "groups": "PS Controller",
+=======
+                    "id": "442e3032-0d8c-40ab-a8c8-cfa993fd30be",
+                    "path": "<DualShockGamepad>/dpad/y",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS Control Scheme",
+>>>>>>> Stashed changes
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "left",
+<<<<<<< Updated upstream
                     "id": "6dd5e243-c5cf-4efe-ba65-da0c04be08a8",
                     "path": "<DualShockGamepad>/dpad/left",
                     "interactions": "",
                     "processors": "",
                     "groups": "PS Controller",
+=======
+                    "id": "851a549f-b57c-44e8-8467-afe056e059c9",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS Control Scheme",
+>>>>>>> Stashed changes
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
                 },
                 {
                     "name": "right",
+<<<<<<< Updated upstream
                     "id": "5f1eee85-d4c5-47ee-b998-7b77e87b1931",
                     "path": "<DualShockGamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "PS Controller",
+=======
+                    "id": "776b06f0-53ff-42b8-9a26-a307db96e58f",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "PS Control Scheme",
+>>>>>>> Stashed changes
                     "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": true
@@ -708,6 +744,17 @@
             "devices": [
                 {
                     "devicePath": "<XInputController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "PS Control Scheme",
+            "bindingGroup": "PS Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<DualShockGamepad>",
                     "isOptional": false,
                     "isOR": false
                 }
