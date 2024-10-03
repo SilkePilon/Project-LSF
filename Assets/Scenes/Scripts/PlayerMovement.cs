@@ -52,8 +52,6 @@ public class PlayerMovement : MonoBehaviour
     
     private void FixedUpdate()
     {
-
-        
         CheckGrounded();
     }
 
@@ -98,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
             isDropping = true;
             platformCol = hit.collider;
             Physics2D.IgnoreCollision(col, platformCol);
-          //  rb.AddForce(-Vector3.up * 0.1f, ForceMode2D.Impulse);  //voeg weer toe als die vaag doet met droppen
+            rb.AddForce(-Vector3.up * 0.1f, ForceMode2D.Impulse);  //voeg weer toe als die vaag doet met droppen
             
         }
         
