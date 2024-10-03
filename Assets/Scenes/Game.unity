@@ -122,6 +122,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &7652072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4738569776014494049, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+  m_PrefabInstance: {fileID: 1981969815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &128738261
 GameObject:
   m_ObjectHideFlags: 0
@@ -37926,6 +37931,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1168257509}
+  - component: {fileID: 1168257510}
   m_Layer: 0
   m_Name: GAME
   m_TagString: Untagged
@@ -37955,6 +37961,25 @@ Transform:
   - {fileID: 1187316242}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168257510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168257508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbfe848f4483e814b9d39114635f03fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 892808239}
+  cameraFollowSpeed: 2
+  minOrthoSize: 5
+  maxOrthoSize: 15
+  orthographicSizeMargin: 2
+  player1: {fileID: 1661033689}
+  player2: {fileID: 7652072}
 --- !u!1 &1187316240
 GameObject:
   m_ObjectHideFlags: 0
@@ -38326,6 +38351,11 @@ RectTransform:
   m_AnchoredPosition: {x: -51.723274, y: 6.166403}
   m_SizeDelta: {x: 19.2, y: 10.8}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1661033689 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4738569776014494049, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+  m_PrefabInstance: {fileID: 1774518244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1696361746
 GameObject:
   m_ObjectHideFlags: 0
