@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/PlayGround.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/game.unity" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +102,7 @@
       <updated>1727855440677</updated>
       <workItem from="1727855444501" duration="16707000" />
       <workItem from="1727937977471" duration="50000" />
-      <workItem from="1727938446389" duration="1534000" />
+      <workItem from="1727938446389" duration="2440000" />
     </task>
     <task id="LOCAL-00001" summary="fwajeufw">
       <option name="closed" value="true" />
@@ -131,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1727876555554</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="GAME FIX YIPPIIEEEE!!!!!">
+      <option name="closed" value="true" />
+      <created>1727940628856</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1727940628856</updated>
+    </task>
+    <task id="LOCAL-00005" summary="cvfdrtyery">
+      <option name="closed" value="true" />
+      <created>1727940799008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1727940799008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +175,8 @@
     <MESSAGE value="fwajeufw" />
     <MESSAGE value="JUMP" />
     <MESSAGE value="JUMP AND DOWN YIPPEEEE :DDDD" />
-    <option name="LAST_COMMIT_MESSAGE" value="JUMP AND DOWN YIPPEEEE :DDDD" />
+    <MESSAGE value="GAME FIX YIPPIIEEEE!!!!!" />
+    <MESSAGE value="cvfdrtyery" />
+    <option name="LAST_COMMIT_MESSAGE" value="cvfdrtyery" />
   </component>
 </project>
