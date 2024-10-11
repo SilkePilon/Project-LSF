@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="LALALALALLALALALALALALALALLALALALALALALALALALA">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/shelf/Uncommitted_changes_before_Update_at_03_10_2024_09_30_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/shelf/Uncommitted_changes_before_Update_at_03_10_2024_09_30__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scripts/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Physics2DSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-    </list>
+    <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -115,7 +103,7 @@
       <workItem from="1727938446389" duration="2440000" />
       <workItem from="1727941365406" duration="2940000" />
       <workItem from="1728631464999" duration="2026000" />
-      <workItem from="1728635753317" duration="2652000" />
+      <workItem from="1728635753317" duration="2817000" />
     </task>
     <task id="LOCAL-00001" summary="fwajeufw">
       <option name="closed" value="true" />
@@ -165,7 +153,15 @@
       <option name="project" value="LOCAL" />
       <updated>1727941873315</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="lalalalalalala">
+      <option name="closed" value="true" />
+      <created>1728638580729</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1728638580729</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +194,7 @@
     <MESSAGE value="GAME FIX YIPPIIEEEE!!!!!" />
     <MESSAGE value="cvfdrtyery" />
     <MESSAGE value="LALALALALLALALALALALALALALLALALALALALALALALALA" />
-    <option name="LAST_COMMIT_MESSAGE" value="LALALALALLALALALALALALALALLALALALALALALALALALA" />
+    <MESSAGE value="lalalalalalala" />
+    <option name="LAST_COMMIT_MESSAGE" value="lalalalalalala" />
   </component>
 </project>
