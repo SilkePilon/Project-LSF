@@ -14,10 +14,10 @@ TagManager:
   - UI
   - Ground
   - Platform
-  - 
-  - 
-  - 
-  - 
+  - player1
+  - player2
+  - p1Attack
+  - p2Attack
   - 
   - 
   - 

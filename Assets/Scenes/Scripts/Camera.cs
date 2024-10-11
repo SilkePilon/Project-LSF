@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
@@ -7,7 +8,7 @@ public class CameraController : MonoBehaviour
     public float minOrthoSize = 5f;
     public float maxOrthoSize = 15f;
     public float orthographicSizeMargin = 2f;
-
+    public float cameraHeight = 8f;
     public GameObject player1;
     public GameObject player2;
 
@@ -16,9 +17,6 @@ public class CameraController : MonoBehaviour
     // Colliders for camera borders
     private BoxCollider2D leftBorder;
     private BoxCollider2D rightBorder;
-    private BoxCollider2D topBorder;
-    private BoxCollider2D bottomBorder;
-
     private void Start()
     {
         // Ensure the main camera is set
@@ -33,59 +31,65 @@ public class CameraController : MonoBehaviour
         }
 
         mainCamera.orthographic = true;
-        UpdateCameraPosition(true);
+
         lastMidpoint = mainCamera.transform.position;
 
         // Create the border colliders
-        CreateBorders();
-        UpdateBorders();
+       CreateBorders();
+
     }
 
-    private void LateUpdate()
+    private void Update()
     {
-        UpdateCameraPosition();
+        UpdateCameraPosition(true);
+        UpdateBorders();
     }
 
     // Update the camera's position based on the players' positions
-    public void UpdateCameraPosition(bool immediate = false)
+    private void UpdateCameraPosition(bool immediate = false)
     {
         if (player1 == null || player2 == null || mainCamera == null) return;
 
+        // Calculate midpoint using only the X and Z coordinates of players
         Vector3 player1Pos = player1.transform.position;
         Vector3 player2Pos = player2.transform.position;
 
-        // Calculate the center point between the two players
-        Vector3 centerPoint = (player1Pos + player2Pos) / 2f;
-        centerPoint.z = mainCamera.transform.position.z; // Maintain camera's z-position
+        // Midpoint on the X-axis, maintaining a fixed Z position for the camera
+        Vector3 midpoint = new Vector3(
+            (player1Pos.x + player2Pos.x) / 2f, // X position based on players' midpoint
+            cameraHeight,                       // Y position fixed to camera height
+            mainCamera.transform.position.z     // Z axis locked to the current camera Z position
+        );
 
-        // Calculate the required orthographic size to fit both players
-        float distanceX = Mathf.Abs(player1Pos.x - player2Pos.x) / 2f;
-        float distanceY = Mathf.Abs(player1Pos.y - player2Pos.y) / 2f;
-        
-        float aspectRatio = Screen.width / (float)Screen.height;
-        float orthographicSizeX = distanceX / aspectRatio;
-        float orthographicSizeY = distanceY;
+        // Calculate the distance between players using only the X axis
+        float distanceBetweenPlayersX = Mathf.Abs(player1Pos.x - player2Pos.x);
 
-        // Use the larger of the two sizes to ensure both players are in view
-        float newOrthoSize = Mathf.Max(orthographicSizeX, orthographicSizeY) + orthographicSizeMargin;
-        newOrthoSize = Mathf.Clamp(newOrthoSize, minOrthoSize, maxOrthoSize);
+        // Adjust orthographic size based on player X-axis distance only
+        float requiredOrthoSize = (distanceBetweenPlayersX / 2f) + orthographicSizeMargin;
+        float newOrthoSize = Mathf.Clamp(requiredOrthoSize, minOrthoSize, maxOrthoSize);
 
         if (immediate)
         {
-            mainCamera.transform.position = centerPoint;
+            mainCamera.transform.position = midpoint; // Move immediately to new midpoint
             mainCamera.orthographicSize = newOrthoSize;
-            lastMidpoint = centerPoint;
+            lastMidpoint = midpoint;
         }
         else
         {
-            // Smoothly move towards the new position and ortho size
-            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, centerPoint, Time.deltaTime * cameraFollowSpeed);
+            // Smoothly move towards the new midpoint on the X axis, and lock the Z axis
+            mainCamera.transform.position = Vector3.Lerp(mainCamera.transform.position, midpoint, Time.deltaTime * cameraFollowSpeed);
             mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, newOrthoSize, Time.deltaTime * cameraFollowSpeed);
 
-            lastMidpoint = centerPoint;
+            // Smoothen transitions if the midpoint has shifted significantly
+            if (Vector2.Distance(new Vector2(midpoint.x, midpoint.z), new Vector2(lastMidpoint.x, lastMidpoint.z)) > 0.1f)
+            {
+                mainCamera.orthographicSize = Mathf.Lerp(mainCamera.orthographicSize, newOrthoSize, Time.deltaTime * cameraFollowSpeed * 2f);
+            }
+
+            lastMidpoint = midpoint;
         }
 
-        UpdateBorders();
+        //Debug.Log($"Camera Position: {mainCamera.transform.position}, Ortho Size: {mainCamera.orthographicSize}");
     }
 
     // Create the borders around the camera's edges
@@ -93,11 +97,10 @@ public class CameraController : MonoBehaviour
     {
         leftBorder = new GameObject("Left Border").AddComponent<BoxCollider2D>();
         rightBorder = new GameObject("Right Border").AddComponent<BoxCollider2D>();
-        topBorder = new GameObject("Top Border").AddComponent<BoxCollider2D>();
-        bottomBorder = new GameObject("Bottom Border").AddComponent<BoxCollider2D>();
 
         // Set borders to be triggers (optional, based on gameplay)
-        leftBorder.isTrigger = rightBorder.isTrigger = topBorder.isTrigger = bottomBorder.isTrigger = false;
+        leftBorder.isTrigger = false;
+        rightBorder.isTrigger = false;
     }
 
     // Update the borders' positions and sizes based on the camera's orthographic size
@@ -112,17 +115,11 @@ public class CameraController : MonoBehaviour
 
         Vector3 cameraPos = mainCamera.transform.position;
 
-        // Update the positions and sizes of all borders
-        leftBorder.transform.position = new Vector3(cameraPos.x - halfWidth - 0.5f, cameraPos.y, 5f);
-        leftBorder.size = new Vector3(1, halfHeight * 2, 1);
+        // Update the positions and sizes of the borders to match the camera's vertical view size
+        leftBorder.transform.position = new Vector3(cameraPos.x - halfWidth - 0.5f, cameraPos.y, 5f); // Set Z to 5
+        leftBorder.size = new Vector3(1, halfHeight * 2, 1);  // Adjust Y size to match the camera's height
 
-        rightBorder.transform.position = new Vector3(cameraPos.x + halfWidth + 0.5f, cameraPos.y, 5f);
-        rightBorder.size = new Vector3(1, halfHeight * 2, 1);
-
-        topBorder.transform.position = new Vector3(cameraPos.x, cameraPos.y + halfHeight + 0.5f, 5f);
-        topBorder.size = new Vector3(halfWidth * 2, 1, 1);
-
-        bottomBorder.transform.position = new Vector3(cameraPos.x, cameraPos.y - halfHeight - 0.5f, 5f);
-        bottomBorder.size = new Vector3(halfWidth * 2, 1, 1);
+        rightBorder.transform.position = new Vector3(cameraPos.x + halfWidth + 0.5f, cameraPos.y, 5f); // Set Z to 5
+        rightBorder.size = new Vector3(1, halfHeight * 2, 1);  // Adjust Y size to match the camera's height
     }
 }

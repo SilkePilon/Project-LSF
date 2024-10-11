@@ -205,7 +205,7 @@ public class SimplifiedTwoPlayerMovement : MonoBehaviour
     }
 
     // Create the borders around the camera's edges
-    private void CreateBorders()
+    public void CreateBorders()
     {
         leftBorder = new GameObject("Left Border").AddComponent<BoxCollider2D>();
         rightBorder = new GameObject("Right Border").AddComponent<BoxCollider2D>();
