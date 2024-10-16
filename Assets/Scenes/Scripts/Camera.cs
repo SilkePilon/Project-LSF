@@ -5,10 +5,10 @@ public class CameraController : MonoBehaviour
 {
     public Camera mainCamera;
     public float cameraFollowSpeed = 2f;
-    public float minOrthoSize = 5f;
-    public float maxOrthoSize = 15f;
+    public float minOrthoSize = 8f;
+    public float maxOrthoSize = 12f;
     public float orthographicSizeMargin = 2f;
-    public float cameraHeight = 8f;
+    public float cameraHeight = 2f;
     public GameObject player1;
     public GameObject player2;
 

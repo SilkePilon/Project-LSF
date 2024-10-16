@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="" />
+    <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +108,7 @@
       <workItem from="1727941365406" duration="2940000" />
       <workItem from="1728631464999" duration="2026000" />
       <workItem from="1728635753317" duration="2817000" />
+      <workItem from="1728639762371" duration="846000" />
     </task>
     <task id="LOCAL-00001" summary="fwajeufw">
       <option name="closed" value="true" />
