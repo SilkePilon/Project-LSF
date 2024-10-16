@@ -50,7 +50,7 @@ public class CameraSwitch : MonoBehaviour
 
     public void SwitchToGameScene()
     {
-        SceneManager.LoadScene("game");
+        SceneManager.LoadScene("Game");
     }
 
     public void ExitGame()
