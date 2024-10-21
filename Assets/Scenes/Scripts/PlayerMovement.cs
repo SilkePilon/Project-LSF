@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public InputActionAsset p1;
     public InputActionAsset p2;
     public bool isPlayer1;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,19 +37,19 @@ public class PlayerMovement : MonoBehaviour
         {
             pInput.actions = p2;
         }
-        
+
     }
     // Update is called once per frame
     private void Update()
-    { 
+    {
         if (rb.velocity.y == 0 && isDropping)
         {
             isDropping = false;
-            Physics2D.IgnoreCollision(col,platformCol, false);
+            Physics2D.IgnoreCollision(col, platformCol, false);
         }
-        MovePlayer (playerMovement);
+        MovePlayer(playerMovement);
     }
-    
+
     private void FixedUpdate()
     {
         CheckGrounded();
@@ -61,6 +61,14 @@ public class PlayerMovement : MonoBehaviour
         {
             playerMovement = context.ReadValue<Vector2>();
             Debug.Log("Player  Input: " + playerMovement);
+        }
+
+         if (playerMovement.x != 0)
+        {
+            // Invert the x scale to flip the character
+            Vector3 newScale = transform.localScale;
+            newScale.x = Mathf.Abs(newScale.x) * Mathf.Sign(playerMovement.x);
+            transform.localScale = newScale;
         }
 
         // Trigger jump if "W" is pressed
