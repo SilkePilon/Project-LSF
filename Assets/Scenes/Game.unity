@@ -2612,7 +2612,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 120.019775, y: -23.539948}
+  m_AnchoredPosition: {x: 120.019775, y: -23.539917}
   m_SizeDelta: {x: 0.42, y: 0.070007324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &351058944
@@ -2984,8 +2984,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1161068391}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+      - m_Target: {fileID: 1242795374}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -4927,7 +4927,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -21.699982}
+  m_AnchoredPosition: {x: 0, y: -21.699951}
   m_SizeDelta: {x: 0.8, y: 0.17999268}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &741386232
@@ -5500,7 +5500,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -120.28021, y: -23.46994}
+  m_AnchoredPosition: {x: -120.28021, y: -23.46997}
   m_SizeDelta: {x: 0.42, y: 0.070007324}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!212 &823352713
@@ -27596,7 +27596,6 @@ MonoBehaviour:
   cameraHeight: 2
   player1: {fileID: 1607307897}
   player2: {fileID: 2019008690}
-  pauseMenuCanvas: {fileID: 484482751}
 --- !u!1 &1174780779
 GameObject:
   m_ObjectHideFlags: 0
@@ -27942,6 +27941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1242795373}
+  - component: {fileID: 1242795374}
   m_Layer: 0
   m_Name: GAME
   m_TagString: Untagged
@@ -27967,6 +27967,19 @@ Transform:
   - {fileID: 1764088159}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1242795374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1242795372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b94047e6e529af4bb3f85816901fd76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuCanvas: {fileID: 484482751}
 --- !u!1 &1259940128
 GameObject:
   m_ObjectHideFlags: 0
@@ -28994,8 +29007,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1161068391}
-        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+      - m_Target: {fileID: 1242795374}
+        m_TargetAssemblyTypeName: Pause, Assembly-CSharp
         m_MethodName: SwitchToMenuScene
         m_Mode: 1
         m_Arguments:

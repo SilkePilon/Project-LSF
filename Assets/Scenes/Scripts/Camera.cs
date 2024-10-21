@@ -12,9 +12,7 @@ public class CameraController : MonoBehaviour
     public float cameraHeight = 2f;
     public GameObject player1;
     public GameObject player2;
-    public GameObject pauseMenuCanvas; // Reference to the pause menu Canvas
-
-    private bool isPaused = false;
+    
     private Vector3 lastMidpoint;
     private float initialOrthoSize;
     private BoxCollider2D leftBorder;
@@ -41,12 +39,6 @@ public class CameraController : MonoBehaviour
 
         CreateBorders();
         InitializeChildElements();
-
-        // Ensure the pause menu canvas is hidden initially
-        if (pauseMenuCanvas != null)
-        {
-            pauseMenuCanvas.SetActive(false);
-        }
     }
 
     private void InitializeChildElements()
@@ -62,63 +54,15 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    public void ResumeGame()
-    {
-        Time.timeScale = 1;
-        isPaused = false;
-
-        // Hide the pause menu canvas
-        if (pauseMenuCanvas != null)
-        {
-            pauseMenuCanvas.SetActive(false);
-        }
-    }
+    
 
     private void Update()
     {
-        // Handle pause menu toggle
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            TogglePauseMenu();
-        }
-
-        // If not paused, continue updating the camera position and borders
-        if (!isPaused)
-        {
-            UpdateCameraPosition(true);
-            UpdateBorders();
-            ScaleCameraChildren();
-        }
+        UpdateCameraPosition(true);
+        UpdateBorders();
+        ScaleCameraChildren();
     }
-    public void SwitchToMenuScene()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Menu");
-    }
-
-    private void TogglePauseMenu()
-    {
-        if (isPaused)
-        {
-            ResumeGame();
-        }
-        else
-        {
-            PauseGame();
-        }
-    }
-
-    private void PauseGame()
-    {
-        Time.timeScale = 0;
-        isPaused = true;
-
-        // Show the pause menu canvas
-        if (pauseMenuCanvas != null)
-        {
-            pauseMenuCanvas.SetActive(true);
-        }
-    }
+    
 
     // Update the camera's position based on the players' positions
     private void UpdateCameraPosition(bool immediate = false)
