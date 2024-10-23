@@ -54,8 +54,6 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    
-
     private void Update()
     {
         UpdateCameraPosition(true);
@@ -63,6 +61,31 @@ public class CameraController : MonoBehaviour
         ScaleCameraChildren();
     }
     
+    private void CreateBorders()
+    {
+        leftBorder = new GameObject("Left Border").AddComponent<BoxCollider2D>();
+        rightBorder = new GameObject("Right Border").AddComponent<BoxCollider2D>();
+
+        leftBorder.isTrigger = false;
+        rightBorder.isTrigger = false;
+    }
+
+    private void UpdateBorders()
+    {
+        float cameraOrthoSize = mainCamera.orthographicSize;
+        float cameraAspect = mainCamera.aspect;
+
+        float halfHeight = cameraOrthoSize;
+        float halfWidth = halfHeight * cameraAspect;
+
+        Vector3 cameraPos = mainCamera.transform.position;
+
+        leftBorder.transform.position = new Vector3(cameraPos.x - halfWidth - 0.5f, cameraPos.y, 5f);
+        leftBorder.size = new Vector3(1, halfHeight * 2, 1);
+
+        rightBorder.transform.position = new Vector3(cameraPos.x + halfWidth + 0.5f, cameraPos.y, 5f);
+        rightBorder.size = new Vector3(1, halfHeight * 2, 1);
+    }
 
     // Update the camera's position based on the players' positions
     private void UpdateCameraPosition(bool immediate = false)
@@ -102,32 +125,6 @@ public class CameraController : MonoBehaviour
         }
     }
 
-    private void CreateBorders()
-    {
-        leftBorder = new GameObject("Left Border").AddComponent<BoxCollider2D>();
-        rightBorder = new GameObject("Right Border").AddComponent<BoxCollider2D>();
-
-        leftBorder.isTrigger = false;
-        rightBorder.isTrigger = false;
-    }
-
-    private void UpdateBorders()
-    {
-        float cameraOrthoSize = mainCamera.orthographicSize;
-        float cameraAspect = mainCamera.aspect;
-
-        float halfHeight = cameraOrthoSize;
-        float halfWidth = halfHeight * cameraAspect;
-
-        Vector3 cameraPos = mainCamera.transform.position;
-
-        leftBorder.transform.position = new Vector3(cameraPos.x - halfWidth - 0.5f, cameraPos.y, 5f);
-        leftBorder.size = new Vector3(1, halfHeight * 2, 1);
-
-        rightBorder.transform.position = new Vector3(cameraPos.x + halfWidth + 0.5f, cameraPos.y, 5f);
-        rightBorder.size = new Vector3(1, halfHeight * 2, 1);
-    }
-
     private void ScaleCameraChildren()
     {
         float scaleFactor = mainCamera.orthographicSize / initialOrthoSize;
@@ -148,7 +145,6 @@ public class CameraController : MonoBehaviour
             }
         }
     }
-    
 }
 
 

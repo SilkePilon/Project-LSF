@@ -96,7 +96,6 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);  // Apply force upward for jump
     }
     
-
     private void DropPlayer()
     {
         if (hit.collider !=null && hit.collider.CompareTag("Platform"))
@@ -129,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         
         // Visualize the ray in the Scene view
         Debug.DrawRay(transform.position, Vector2.down * rayLength, Color.red);
-    
+
     }
 
 }
