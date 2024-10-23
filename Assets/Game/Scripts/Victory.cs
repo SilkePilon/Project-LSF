@@ -29,5 +29,4 @@ public class Victory : MonoBehaviour
             victoryCanvas.SetActive(true);
         }
     }
-    
 }
