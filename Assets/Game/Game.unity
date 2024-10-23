@@ -3205,7 +3205,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &482150307
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5445,7 +5445,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.055116832, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5456,7 +5456,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.88976634, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &765706458
 Animator:
@@ -28111,7 +28111,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.056688458, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -28122,7 +28122,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.8866231, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &1151933845
 Animator:
@@ -29645,12 +29645,20 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32396573
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
       propertyPath: m_Size.y
-      value: 1.0278811
+      value: 0.99138755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0035488307
       objectReference: {fileID: 0}
     - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
       propertyPath: m_Offset.y
-      value: 0.12980857
+      value: 0.111561805
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31848,9 +31856,9 @@ GameObject:
   - component: {fileID: 1834954939}
   - component: {fileID: 1834954941}
   - component: {fileID: 1834954940}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Victory Royale
-  m_TagString: Untagged
+  m_TagString: Platform
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32829,6 +32837,22 @@ PrefabInstance:
     - target: {fileID: 4866190941542242145, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
       propertyPath: m_ActionEvents.Array.data[1].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Size.x
+      value: 0.3165524
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Size.y
+      value: 1.010611
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0015950203
+      objectReference: {fileID: 0}
+    - target: {fileID: 8938028610981610624, guid: 5b58d7ef3a4df9647b1621063ff99df7, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.11183716
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
