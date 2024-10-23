@@ -6,8 +6,150 @@
   <component name="ChangeListManager">
     <list default="true" id="bffaa233-8f09-4215-9636-18343e8649e4" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-LSF/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - Plains/Demo.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.changes" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.changes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.plastic/plastic.wktree" beforeDir="false" afterPath="$PROJECT_DIR$/.plastic/plastic.wktree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bench_drop.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Bench_drop.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Lamp.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Lamp.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/OpenSettings.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/OpenSettings.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PF Village Props - Log Bench.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PF Village Props - Log Bench.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PF Village Props - Spike Ball.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/PF Village Props - Spike Ball.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/bg.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/bg.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/dwadwadwdwadwadw_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/dwadwadwdwadwadw_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/idle.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/idle.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/kill.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/kill.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/lamp.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/lamp.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/loading.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/loading.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/loading.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/loading.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/output-onlinegiftools3-ezgif_com-gif-to-sprite-converter 1_0 (1).controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/output-onlinegiftools3-ezgif_com-gif-to-sprite-converter 1_0 (1).controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/settings.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/settings.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/settings_menu.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/settings_menu.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/spikeball.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/spikeball.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/spikeballchain.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/spikeballchain.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/Demo.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/Demo.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/ReadMe.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/ReadMe.pdf.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/Sprites.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Icon/2D Pixel Art Icons Swords/Sprites.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - American Forest/Atlas.spriteatlas" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/2D Pixel Art Platformer Biome - American Forest/Atlas.spriteatlas" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Assets/Pixel Font - Tripfive/Fonts/PeaberryDoublespace SDF.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Assets/Pixel Font - Tripfive/Fonts/PeaberryDoublespace SDF.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Image.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player1.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player1.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player2.inputactions" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Player2.inputactions.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player/Weapon.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player/Weapon/Sword6.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player/Weapon/Sword6.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player/Weapon/swing.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Animations/Player/Weapon/swing.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Music.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Music/Zelda Original Soundtrack - Song of Storms.mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Music/Zelda Original Soundtrack - Song of Storms.mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Music/天上太阳红彤彤  Red sun in the sky (français ST, english sub).mp3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Music/天上太阳红彤彤  Red sun in the sky (français ST, english sub).mp3.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Camera.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Menu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Menu.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Pause.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/Pause.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerAttack.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerAttack.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerMovement.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerMovement.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerSelect.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayerSelect.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayersStats.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Scripts/PlayersStats.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/00.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/00.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/01.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/02.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/03.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/04.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/05.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/05.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06_11.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06_11.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06_6.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/06_6.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/07.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/07.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/All.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/All.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/Player 1.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/Player 1.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/Player 2.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Sprites/Player 2.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bg.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/bg.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/game_select.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/game_select.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/menu.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/menu.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Firefly 20240916095351.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/Firefly 20240916095351.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Animation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/New Animation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/dwadwadwdwadwadw 1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/dwadwadwdwadwadw 1.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/dwadwadwdwadwadw_0.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/dwadwadwdwadwadw_0.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/idel.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/idel.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools (3).gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools (3).gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools3-ezgif.com-gif-to-sprite-converter (2).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools3-ezgif.com-gif-to-sprite-converter (2).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools3-ezgif.com-gif-to-sprite-converter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/output-onlinegiftools3-ezgif.com-gif-to-sprite-converter.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Tileset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/il_570xN.4545123276_7vkg-ezgif.com-webp-to-png-converter-removebg-preview.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/il_570xN.4545123276_7vkg-ezgif.com-webp-to-png-converter-removebg-preview.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/main.unity" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/main.unity.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/output-onlinegiftools (1).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/output-onlinegiftools (1).png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/test.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,12 +162,12 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/SilkePilon/Project-LSF&quot;,
-    &quot;accountId&quot;: &quot;7655ecae-cc39-4421-a9a2-f8e07fa97ee9&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/SilkePilon/Project-LSF.git",
+    "accountId": "7655ecae-cc39-4421-a9a2-f8e07fa97ee9"
   }
-}</component>
+}]]></component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 3
@@ -109,6 +251,7 @@
       <workItem from="1728631464999" duration="2026000" />
       <workItem from="1728635753317" duration="2817000" />
       <workItem from="1728639762371" duration="846000" />
+      <workItem from="1729686246760" duration="1671000" />
     </task>
     <task id="LOCAL-00001" summary="fwajeufw">
       <option name="closed" value="true" />
